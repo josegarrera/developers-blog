@@ -3,6 +3,7 @@ module.exports = {
 		title: `Developer's Blog`,
 		description: `Jose Garrera developer's blog`,
 		twitter: `@josegarrera`,
+		siteUrl: 'https://josegarrera.com',
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -14,5 +15,15 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-mdx`,
+		{
+			resolve: `gatsby-plugin-theme-ui`,
+			options: {
+				preset: `@theme-ui/preset-funk`,
+				prismPreset: `prism-okaidia`,
+			},
+		},
+		`gatsby-plugin-image`,
+		`gatsby-plugin-sharp`,
+		`gatsby-transformer-sharp`,
 	],
 };

@@ -1,16 +1,39 @@
+/** @jsx jsx */
+
 import {Link} from 'gatsby';
-import React from 'react';
+import {jsx} from 'theme-ui';
+
+const bodyStyles = {
+	mx: `2rem`,
+	padding: `1rem`,
+};
+
+const headerStyles = {
+	paddingLeft: `10px`,
+};
+
+const mainStyles = {
+	maxWidth: `container`,
+	padding: `1rem`,
+	mx: `auto`,
+	textAlign: `center`,
+};
+
+const footerStyles = {
+	textAlign: `center`,
+	background: `lightgrey`,
+};
 
 const Layout = ({children}) => {
 	return (
-		<div>
-			<header>
+		<div sx={bodyStyles}>
+			<header sx={headerStyles}>
 				<nav>
 					<Link to='/'>Home</Link>
 				</nav>
 			</header>
-			<main>{children}</main>
-			<footer>
+			<main sx={mainStyles}>{children}</main>
+			<footer sx={footerStyles}>
 				<p>A fun footer</p>
 			</footer>
 		</div>
